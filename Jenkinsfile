@@ -9,7 +9,7 @@ pipeline {
                 sh '''
                     pwd
                     ls
-                    echo $MAVEN_HOME
+                    echo ${MAVEN_HOME}
                     echo "PATH = ${PATH}"
                     echo "JAVA_HOME = ${JAVA_HOME}"
                     echo "JENKINS_VERSION = ${JENKINS_VERSION}"
