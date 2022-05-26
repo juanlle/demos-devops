@@ -19,7 +19,7 @@ pipeline {
             steps {
                 sh '''
                     pwd
-                    mvn compile
+                    mvn compile .
                    '''
             }
         }
