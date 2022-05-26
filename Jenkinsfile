@@ -18,23 +18,23 @@ pipeline {
         }
         stage("Compile") {
             steps {
-                sh "mvn compile"
+                sh "echo Hemos compilado"
             }
         }
         stage("Unit test") {
             steps {
-                sh "mvn test"
+                sh "echo Hemos testeando"
             }
         }
        
         stage("Build") {
             steps {
-                sh "mvn package"
+                sh "echo Hemos montado imagen docker"
             }
         }
         stage("Deploy") {
             steps {
-                sh "mvn install"
+                sh "echo Hemos desplegado contendor"
             }
         }
     }
