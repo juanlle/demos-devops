@@ -7,6 +7,7 @@ pipeline {
         stage ('Initialize') {
             steps {
                 sh '''
+                    echo "$PWD"
                     echo "PATH = ${PATH}"
                     echo "JAVA_HOME = ${JAVA_HOME}"
                     echo "JENKINS_VERSION = ${JENKINS_VERSION}"
