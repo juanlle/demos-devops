@@ -9,6 +9,7 @@ pipeline {
                 sh '''
                     pwd
                     ls
+                    echo $MAVEN_HOME
                     echo "PATH = ${PATH}"
                     echo "JAVA_HOME = ${JAVA_HOME}"
                     echo "JENKINS_VERSION = ${JENKINS_VERSION}"
@@ -17,10 +18,7 @@ pipeline {
         }
         stage("Compile") {
             steps {
-                sh '''
-                    pwd
-                    mvn compile .
-                   '''
+                sh "mvn compile"
             }
         }
         stage("Unit test") {
