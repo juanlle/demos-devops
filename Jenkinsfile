@@ -17,8 +17,10 @@ pipeline {
         }
         stage("Compile") {
             steps {
-                sh "pwd"
-                sh "mvn compile"
+                sh '''
+                    pwd
+                    mvn compile
+                   '''
             }
         }
         stage("Unit test") {
