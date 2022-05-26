@@ -17,7 +17,7 @@ pipeline {
         }
         stage("Compile") {
             steps {
-                sh 'pwd'
+                sh "pwd"
                 sh "mvn compile"
             }
         }
