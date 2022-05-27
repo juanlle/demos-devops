@@ -1,4 +1,4 @@
-
+pipeline{
     agent any
     triggers { // Sondear repositorio a intervalos regulares
         pollSCM('* * * * *')
