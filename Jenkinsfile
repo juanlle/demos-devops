@@ -23,6 +23,7 @@ pipeline{
         }
         stage("Unit test") {
             steps {
+                mkdir
                 sh "echo Hemos testeando"
             }
         }
